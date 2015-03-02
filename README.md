@@ -1,5 +1,3 @@
-# EE450 Final Project - UNIX C Socket C/S communication #
-
 ### Description ###
 I built a non-blocking TCP servers for health center, it can accept multiple clients simultaneously without blocking. In this way, there is no specific input sequence for patient 1 client and patient 2 client. 
 
@@ -32,30 +30,27 @@ In Phases 1 and 2, all communications are through TCP sockets. In phase 3, howev
 
 ### Files ###
 
-healthcenterserver.cpp
+**healthcenterserver.cpp**
 Create the TCP server instance by using class tcp_server, then listen to the connections and accept them. When the connections accepted, created TCP data instance by using class tcp_data. To archive non-blocking socket, I used select() to track which socket is active, when found an active socket, process it. Then the health center server can exchange information with patient clients just according to the project description.
 
-patient1.cpp
-patient2.cpp
+**patient1.cpp**
+**patient2.cpp**
 Basically they are the same code, only the name of patient and name of input file are different.
 When create socket instances by using class tcpclientclass and udpclass, then the processes are all according to the project description.
 
-doctor.cpp
+**doctor.cpp**
 Two doctors processes, bind port and waiting for new data. When receive requests from the patient client, send cost to them. Because each patient could request to the same doctor, this doctor server is implemented on a loop mode. So the doctor need to be close by Ctrl+C. I used waitpid() to avoid zombie process.
 
-tcpclientclass.cpp
+**tcpclientclass.cpp**
 Define and the implementation of class tcpclientclass, which are the operations TCP client uses.
 Includes create socket, connect, send data, receive data, close socket and so on.
 
-udpclass.cpp
+**udpclass.cpp**
 Define and the implementation of class udpclass, which are the operations UDP instance uses.
 Include create socket, bind, send data, receive data, close socket and so on.
 
-Makefile
+**Makefile**
 Just run "make" to compile all the programs.
-
-README
-This file.
 
 ### Running Order ###
 
