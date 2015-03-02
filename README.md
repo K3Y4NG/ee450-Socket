@@ -54,10 +54,10 @@ Just run "make" to compile all the programs.
 
 ### Running Order ###
 
-1) Run "make" to compile all the codes.
-2) Run "./healthcenterserveroutput" to start TCP server.
-3) Run "./doctoroutput" to srart UDP server.
-4) Run "./patient1output" and "./patient2output" to start patient process, no specific sequence.
-5) Input the index number of time slot in two patient processes, no specific sequence.
-6) Type "Ctrl+C" in doctor process to close the doctoroutput.
-7) Type "Ctrl+C" in health center process to close the doctoroutput.
+1) Run "make" to compile all the codes.  
+2) Run "./healthcenterserveroutput" to start TCP server.  
+3) Run "./doctoroutput" to srart UDP server.  
+4) Run "./patient1output" and "./patient2output" to start patient process, no specific sequence.  
+5) Input the index number of time slot in two patient processes, no specific sequence.  
+6) Type "Ctrl+C" in doctor process to close the doctoroutput.  
+7) Type "Ctrl+C" in health center process to close the doctoroutput.  
